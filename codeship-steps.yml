@@ -2,7 +2,7 @@
   name: example_parallel_step
   steps:
     - service: codeship_example
-      command: sleep 10 && printenv
+      command: printenv
     - service: codeship_example
       # shell wrapper not required unless passing along env vars or combining commands
       command: /bin/bash -c 'sleep 10 && ls && echo ${CI_BUILD_ID}'
